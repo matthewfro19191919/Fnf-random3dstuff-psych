@@ -49,11 +49,11 @@ jobs:
          haxelib git faxe https://github.com/uhrobots/faxe
          haxelib git polymod https://github.com/larsiusprime/polymod.git
          haxelib install hxcpp-debug-server
-      - name: Compile (Mac)
+      - name: Compile (MacOS)
         if: startsWith(matrix.os, 'macos')
         run: haxelib run lime build macos -D officialBuild
 
-      - name: Upload Artifact (Mac)
+      - name: Upload Artifact (MacOS)
         if: startsWith(matrix.os, 'macos')
         uses: actions/upload-artifact@main
         with:
